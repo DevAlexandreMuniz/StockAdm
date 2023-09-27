@@ -41,7 +41,7 @@ namespace StockAdm.Migrations
 
                     b.HasKey("ProdutoId");
 
-                    b.ToTable("Produtos");
+                    b.ToTable("Produtos", (string)null);
                 });
 #pragma warning restore 612, 618
         }
