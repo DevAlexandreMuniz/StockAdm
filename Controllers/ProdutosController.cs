@@ -55,4 +55,27 @@ public class ProdutosController : Controller
         var produtos = await db.Produtos.ToListAsync();
         return View(produtos);
     }
+
+    public async Task<IActionResult> Apagar(int produtoId)
+    {
+        var produto = await db.Produtos
+            .SingleOrDefaultAsync(a => a.ProdutoId == produtoId);
+
+        if (produto == null)
+            return NotFound();
+
+        return View(produto);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> ConfirmarParaApagar(Produto produto)
+    {
+        if (produto is null)
+            throw new ArgumentNullException(nameof(produto));
+
+        db.Produtos.Remove(produto);
+        await db.SaveChangesAsync();
+
+        return RedirectToAction(nameof(Listar));
+    }
 }

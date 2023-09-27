@@ -24080,6 +24080,11 @@
       "FilePath": "c:\\Users\\deval\\Documents\\GitHub\\StockAdm\\Views\\Produtos\\Editar.cshtml",
       "TargetPath": "Views\\Produtos\\Editar.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\deval\\Documents\\GitHub\\StockAdm\\Views\\Produtos\\Apagar.cshtml",
+      "TargetPath": "Views\\Produtos\\Apagar.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }

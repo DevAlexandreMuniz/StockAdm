@@ -2,6 +2,7 @@ namespace StockAdm.Models;
 
 public class Produto
 {
+    public Produto() {}
     public Produto(string nome, int quantidade, decimal valor)
     {
         Nome = nome;
